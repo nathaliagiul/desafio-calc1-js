@@ -37,7 +37,7 @@ const thisDiv = () => {
     let calcDiv = div(firstNumber, secondNumber);
     let calcRestDiv = restDiv(firstNumber, secondNumber);
     
-    if (firstNumber == 0 || secondNumber == 0 ||isNaN(calcDiv) || isNaN(calcRestDiv)){
+    if (firstNumber == 0 || secondNumber == 0 || isNaN(calcDiv) || isNaN(calcRestDiv)){
         return `Não é possível realizar a divisão a partir dos valores informados.`;
     } else {
         alert(`Divisão: ${calcDiv}`);
@@ -48,6 +48,6 @@ const thisDiv = () => {
 alert('Soma: ' + thisSum);
 alert('Subtração: ' + sub(firstNumber, secondNumber));
 alert('Multiplicação: ' + multi(firstNumber, secondNumber));
-alert(thisDiv())
+alert(thisDiv());
 alert(evenOrOdd(thisSum));
 alert(duplicated(firstNumber, secondNumber));
