@@ -10,34 +10,15 @@ const multi = (a, b) => (a * b);
 const div = (a, b) => (a / b);
 const restDiv = (a, b) => (a % b);
 
-const evenOrOdd = (thisSum) => {
-    if(thisSum % 2 == 0){
-        isEvenOrOdd = 'Par';
-    } else {
-        isEvenOrOdd = 'Ímpar';
-    }
-
-    return `Par ou impar: ${isEvenOrOdd}`
-};
-
-const duplicated = (a, b) => {
-    if(a == b){
-        isDuplicated = 'Sim';
-    } else {
-        isDuplicated = 'Não';
-    }
-
-    return `Número iguais: ${isDuplicated}`
-};
-
-const thisSum = sum(firstNumber, secondNumber);
+isEvenOrOdd = sum(firstNumber, secondNumber) % 2 == 0 ? 'Par' : 'Ímpar';
+isDuplicated = firstNumber === secondNumber ? 'Sim' : 'Não';
 
 const thisDiv = () => {
 
     let calcDiv = div(firstNumber, secondNumber);
     let calcRestDiv = restDiv(firstNumber, secondNumber);
     
-    if (firstNumber == 0 || secondNumber == 0 || isNaN(calcDiv) || isNaN(calcRestDiv)){
+    if (firstNumber == 0 || secondNumber == 0 ||isNaN(calcDiv) || isNaN(calcRestDiv)){
         return `Não é possível realizar a divisão a partir dos valores informados.`;
     } else {
         alert(`Divisão: ${calcDiv}`);
@@ -45,9 +26,9 @@ const thisDiv = () => {
     }
 };
 
-alert('Soma: ' + thisSum);
+alert('Soma: ' + sum(firstNumber, secondNumber));
 alert('Subtração: ' + sub(firstNumber, secondNumber));
 alert('Multiplicação: ' + multi(firstNumber, secondNumber));
 alert(thisDiv());
-alert(evenOrOdd(thisSum));
-alert(duplicated(firstNumber, secondNumber));
+alert(`Par ou impar: ${isEvenOrOdd}`);
+alert(`Número iguais: ${isDuplicated}`);
